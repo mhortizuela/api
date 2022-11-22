@@ -33,7 +33,7 @@ $app = new \Slim\App;
 			$conn = null;
 		return $response;
 	});
-//API END POINTS printName
+//API END POINTS printName UPDATED BY MANNY R. HORTIZUELA
 	$app->post('/printName', function (Request $request, Response
 				$response, array $args) {
 				//Database
