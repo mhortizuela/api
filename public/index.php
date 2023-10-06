@@ -15,12 +15,17 @@ require '../src/vendor/autoload.php';
 	{
 		$data=json_decode($request->getBody());
 		$info=array();
-		array_push($info,array("lname"=>$data->lastname, 
-		"fname"=>$data->firstname,"dept"=>$data->department,
-		"col"=>$data->college));
-		return $response->getBody()->write(json_encode(array(
-			"status"=>"sucess",
-		"data"=>$info)));
+		array_push($info,array(
+				"lname"=>$data->lastname,
+				"fname"=> $data->firstname,
+				"dept"=> $data->department,
+				"col"=> $data->college,
+		
+		));
+		$response->getBody()->write(json_encode(array("status"=>"success",
+							"data"=>$info
+		)));
+		return $response;
 	});
 	$app->run();
 ?>
